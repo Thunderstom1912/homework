@@ -7,40 +7,37 @@ int main( ) {
      printf("Xin Chao;\n");
      printf("Ban muon nhap bao nhieu gia tri: ");
      scanf("%d",&n);
+     if (n<0) {
+         printf("Gia Tri Khong Hop Le!! Vui Long Kiem Tra Lai!!");
+         return 0;
+     } else {
+         if (n>100) {
+             printf("Gia Tri Khong Hop Le!! Vui Long Kiem Tra Lai!!");
+             return 0;
+         };
+     };
      printf("Hay nhap %d gia tri vao: ",n);
 
      for (i=0; i<n; i++){
          scanf("%d",&a[i]);
-         if(a[i] <0) {
-             printf("Loi Doi So Nho Hon 0!! Vui Long Kiem Tra Lai!!");
-             return 0;
-         }
-         if(a[i]>100) {
-             printf("Loi Doi So Lon Hon 100!! Vui Long Kiem Tra Lai");
-             return 0;
-         }
      }
 
      printf("Chuoi cua ban la: ");
      for (i=0; i<n; i++){
          printf("%d ",a[i]);
      }
+     printf("\n");
      
-     int z = 0;
-     while (z=0){
-         printf("Hay nhap gia tri X: ");
+     x=0; 
+     y=0;
+     while (x-y>=0){
+         printf("Hay nhap gia tri cho X: ");
          scanf("%d",&x);
-         printf("Hay nhap gia tri Y: ");
-         scanf("%d",y);
-         if (x<y) {
-             z=x+y;
-         };
-         if (x>y) {
-             printf("Loi Doi So (x>y)!! Vui Long Kiem Tra Lai!!");
-             z=0;
-         }
-
+         printf("Hay nhap gia tri cho Y: ");
+         scanf("%d",&y);
+         int z = y-z;
+         if(z<0) {printf("Gia Tri Khong Hop Le (x>y)!! Vui Long Kiem Tra Lai!!");};
      }
-     
+
 	 return 0;
 }
